@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="lorem ipsum">
+    <title>Тест</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container-fluid p-5 solid text-center">
+        <h1 class="title">Надпись</h1>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4 col-sm-12 red p-5 solid"></div>
+          <div class="col-md-4 col-sm-12 blue p-5 dashed"></div>
+          <div class="col-md-4 col-sm-12 green p-5 solid"></div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4 col-sm-12 p-4 text-center solid">
+            <button type="submit" class="btn btn-warning">Кнопка 1</button>
+          </div>
+          <div class="col-md-8 col-sm-12 p-4 text-center solid">
+            <button type="submit" class="btn btn-success btnTwo">Кнопка 2</button>
+          </div>
+        </div>
+    </div>
+    
+    <script>
+        var buttonOne = document.querySelector('.btn');
+        var buttonTwo = document.querySelector('.btnTwo');
+        var title = document.querySelector('.title');
+        var red = document.querySelector('.red');
+        var blue = document.querySelector('.blue');
+
+        // alert("Привет, мир!");
+
+        function onClick() {
+            if (title.style.display=="none") {
+              title.style.display="contents";
+            } else {
+              title.style.display="none";
+            }
+        }
+
+        buttonOne.addEventListener('click', onClick);
+
+        function moveBlocks() {
+          if(blue.style.order == 0) {
+            blue.style.order = -1;
+          } else {
+            blue.style.order = 0;
+          }
+        }
+
+        buttonTwo.addEventListener('click', moveBlocks);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </body>
+</html>
